@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dieu kien 2</title>
+</head>
+<body>
+Nhập số tuổi của học sinh :
+<input type="text" id="tuoi">
+<button type="button" onclick="kiemtra()"> Kiem tra</button>
+</body>
+<script>
+    function kiemtra() {
+        let a = Number(document.getElementById('tuoi').value);
+        if (a == 15) {
+            alert("Bạn đủ tuổi đi học lớp 10");
+        }
+        else {
+            document.getElementById('tuoi').value ="Bạn k phù hợp để đi học lớp 10";
+         }
+    }
+</script>
+</html>

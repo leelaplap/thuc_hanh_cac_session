@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tu dien</title>
+</head>
+<body>
+<input type="text" id="english" placeholder="English">
+<button type="button" onclick="display()">SEACH</button>
+<input type="text" id="vietnamese" placeholder="Vietnamese">
+<script>
+    function seach() {
+        let x = document.getElementById('english').value;
+        let eng = ["one", "two", "three", "four", "five"];
+        let vie = ["một", "hai", "ba", "bốn", "năm"];
+        let check = false;
+        for (let i = 0; i < eng.length; i++) {
+            if (x === eng[i]) {
+                return vie[i];
+            }
+        }
+        return "khong cos";
+    }
+
+    function display() {
+        document.write(seach());
+    }
+</script>
+</body>
+</html>

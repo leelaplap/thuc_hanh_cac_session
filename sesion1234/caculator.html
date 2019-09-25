@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caculator</title>
+</head>
+<body>
+<form>
+    Số thứ 1: <input id="1" type="text" value=""><br/><br/>
+    Số thứ 2: <input id="2" type="text" value=""><br/><br/>
+    Kết quả: <input id="3" type="text" value="" disabled>
+<button type="button" onclick="cong()">Addition(+)</button>
+    <button type="button" onclick="tru()">Subtraction(-)</button>
+    <button type="button" onclick="nhan()">Multipilication(X)</button>
+    <button type="button" onclick="chia()">Divisiom(/)</button>
+    <script>
+        function cong() {
+            let a = Number(document.getElementById("1").value);
+            let b = Number(document.getElementById("2").value);
+            document.getElementById("3").value = a+b;
+        }
+    </script>
+    <script>
+        function tru() {
+            let a = Number(document.getElementById("1").value);
+            let b = Number(document.getElementById("2").value);
+            document.getElementById("3").value = a-b;
+
+        }
+    </script>
+    <script>
+        function nhan() {
+            let a = Number(document.getElementById("1").value);
+            let b = Number(document.getElementById("2").value);
+            document.getElementById("3").value = a*b;
+        }
+    </script>
+    <script>
+        function chia() {
+            let a = Number(document.getElementById("1").value);
+            let b = Number(document.getElementById("2").value);
+            document.getElementById("3").value = a/b;
+        }
+    </script>
+</form>
+</body>
+</html>

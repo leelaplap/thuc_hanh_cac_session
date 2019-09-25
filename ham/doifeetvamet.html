@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="foot" placeholder="foot">
+<input type="text" id="meter" placeholder="meter">
+<button type="button" onclick="caculate(); caculate1()">tinh</button>
+<script>
+    function caculate() {
+        let num = +document.getElementById('foot').value;
+        let val = num * 0.305;
+        document.getElementById('meter').value = val;
+    }
+
+    function caculate1() {
+        let num = +document.getElementById('meter').value;
+        let so1 = num * 3.279;
+        document.getElementById('foot').value = so1;
+    }
+</script>
+</body>
+</html>

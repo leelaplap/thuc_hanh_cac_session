@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Đầu số nhà mạng Viettel: 086, 096, 097, 098, 032, 033, 034, 035, 036, 037, 038, 039.
+<script>
+    function phoneNumber(str) {
+        number = /^0[86,96,97,98,32-39]*[0-9]{7}$/;
+        if (number.test(str)) {
+            alert('DUNG')
+        }
+        else {
+            alert("sai")
+        }
+    }
+
+    let abc = "0361111111";
+    console.log(phoneNumber(abc));
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="giaiThua">
+<button type="button" onclick="cacul()"> Tính</button>
+<script>
+    function cacul() {
+        let num = Number(document.getElementById('giaiThua').value);
+        let n=1 ;
+        for (let i = 1; i <= num; i++) {
+            n =n*i;
+        }
+        document.write(n)
+    }
+</script>
+</body>
+</html>

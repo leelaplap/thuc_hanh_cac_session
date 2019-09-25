@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function nameClass(str) {
+        myClass = /^[A,P,C]*[0-9]{4}[G,H,I,K,L,M]$/;
+        if (myClass.test(str)){
+            return true;
+        }
+        return false;
+    }
+
+    let abc = "C0323K";
+    console.log(nameClass(abc));
+</script>
+</body>
+</html>

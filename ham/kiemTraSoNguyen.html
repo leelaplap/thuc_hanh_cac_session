@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiemtra so nguyen</title>
+</head>
+<body>
+<input type="text" id="numNeedToCheck" placeholder="Num Need To Check">
+<button type="button" onclick="getElement()">Check</button>
+<script>
+        function getElement() {
+        let x= +document.getElementById('numNeedToCheck').value;
+      return  numCheck(x)
+    }
+    function numCheck(val) {
+        if (caculate(val)) {
+            alert("đây là số nguyên tố");
+        } else {
+            alert("đây khong phải số nguyên tố");
+        }
+    }
+
+    function caculate(num) {
+        if (num < 2) {
+            return false;
+        } else {
+            for (so = 2; so <= Math.sqrt(num); so++) {
+                if (num % so === 0) {
+                    return false;
+                    break;
+                }
+            }
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

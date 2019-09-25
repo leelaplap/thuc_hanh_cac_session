@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src=" chibi1.jpg" height="275"  width="183" id="anh1" alt="1" onclick="cick()"/>
+<img src=" chibi2.jpg" height="275"  width="183" id="anh2" alt="4" onclick="cick1()"/>
+<img src=" chibi3.jpg" height="275"  width="183" id="anh3" alt="7" onclick="cick2()"/>
+<img src=" chibi4.jpg" height="275"  width="183" id="anh4" alt="10" onclick="cick3()"/>
+<img src=" chibi5.jpg" height="275"  width="183" id="anh5" alt="13" onclick="cick4()"/>
+<script>
+    let img = document.getElementById('anh1');
+    let img1 = document.getElementById('anh2');
+    let img2 = document.getElementById('anh3');
+    let img3 = document.getElementById('anh4');
+    let img4 = document.getElementById('anh5');
+
+    function cick() {
+        if (img.alt === "1") {
+            img.src = "ta1.jpg";
+            img.alt = "2";
+        } else if (img.alt === "2") {
+            img.src = "thi1.jpg";
+            img.alt = "3";
+        } else {
+            img.src = "chibi1.jpg";
+            img.alt = "1";
+        }
+    }
+
+    function cick1() {
+        if (img1.alt === "4") {
+            img1.src = "ta2.jpg";
+            img1.alt = "5";
+        } else if (img1.alt === "5") {
+            img1.src = "thi2.jpg";
+            img1.alt = "6";
+        } else {
+            img1.src = "chibi2.jpg";
+            img1.alt = "4";
+        }
+    }
+
+    function cick2() {
+        if (img2.alt === "7") {
+            img2.src = "ta3.jpg";
+            img2.alt = "8";
+        } else if (img2.alt === "8") {
+            img2.src = "thi3.jpg";
+            img2.alt = "9";
+        } else {
+            img2.src = "chibi3.jpg";
+            img2.alt = "7";
+        }
+    }
+
+    function cick3() {
+        if (img3.alt === "10") {
+            img3.src = "ta4.jpg";
+            img3.alt = "11";
+
+        } else if (img3.alt === "11") {
+            img3.src = "thi4.jpg";
+            img3.alt = "12";
+        } else {
+            img3.src = "chibi4.jpg";
+            img3.alt = "10";
+        }
+    }
+
+    function cick4() {
+        if (img4.alt === "13") {
+            img4.src = "ta5.jpg";
+            img4.alt = "14";
+        } else if (img4.alt === "14") {
+            img4.src = "thi5.jpg";
+            img4.alt = "15";
+        } else {
+            img4.src = "chibi5.jpg";
+            img4.alt = "13";
+        }
+    }
+
+</script>
+</body>
+</html>

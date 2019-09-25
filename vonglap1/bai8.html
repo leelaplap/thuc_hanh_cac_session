@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+</head>
+<body>
+<script>
+    let game = Number(prompt('nhập các số nguyên dương từ 1-10'));
+    for (let i = 0; i<= 10; i++ ) {
+        if (game === Math.floor(Math.random()*10)+1) {
+            alert('bạn win');
+            break;
+        } else {
+            alert('you lose');
+            break;
+        }
+    }
+</script>
+</body>
+</html>

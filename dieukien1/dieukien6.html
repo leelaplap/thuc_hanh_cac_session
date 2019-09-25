@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập số sản phảm đã bán :
+<input type="text" id="doanhso">
+<button type="button" onclick="tinh()">xem hoa hồng nhận được</button>
+<script>
+    function tinh() {
+        let a = Number(document.getElementById('doanhso').value);
+        if (a <= 100) {
+            document.getElementById('hoahong').value = "b k duoc hoa hong";
+        } else if (a >100 && a<= 500) {
+            document.getElementById('hoahong').value = "b nhan duoc 20% hoa hong";
+        } else if (a >500) {
+            document.getElementById('hoahong').value = "b nhan duoc 50% hoa hong";
+        }
+    }
+</script>
+<input type="text" id="hoahong">
+</body>
+</html>

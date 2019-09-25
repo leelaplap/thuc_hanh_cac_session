@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập số tuổi cần biết : <input type="text" id="yearsOld">
+<button type="button" onclick="caculate()">Kiểm tra</button>
+<script>
+    function caculate() {
+        let x = Number(document.getElementById('yearsOld').value);
+        if (x >= 0 && x <=120) {
+            alert('Đây là tuổi của con người');
+        } else {
+            alert('Đây không phải con người');
+        }
+    }
+</script>
+</body>
+</html>

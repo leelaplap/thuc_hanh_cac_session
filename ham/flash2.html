@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="playOn()">Turn on</button>
+<button type="button" onclick="playOff()">Turn off</button>
+<canvas id="lamp" width="500" height="500" style="border: 1px double black"></canvas>
+<script>
+   let Lamp = function (status) {
+       this.status = status;
+       this.lampOn = function () {
+           this.status = true
+       };
+       this.lampOff = function () {
+           this.status = false;
+       };
+   };
+
+   function Button(status, lamp) {
+       this.status= status;
+       this.lamp = lamp;
+       this.buttonOn = function () {
+           this.status = true;
+           lamp.lampOn();
+       };
+       this.buttonOff = function () {
+           this.status = status;
+           lamp.lampOff();
+       };
+   }
+
+   let lamp = new Lamp(true);
+   let button = new Button(true,lamp);
+
+   button.buttonOn();
+   console.log(lamp.status);
+   button.buttonOff();
+   console.log(lamp.status);
+
+   display();
+
+    function playOn() {
+        let cxt= document.getElementById('lamp').getContext('2d');
+        cxt.beginPath();
+        cxt.clearRect(0,0,500,500);
+        cxt.arc(250,250,50,0,Math.PI*2);
+        cxt.fillStyle ="red";
+        cxt.fill();
+    }
+
+    function playOff() {
+        let cxt= document.getElementById('lamp').getContext('2d');
+        cxt.beginPath();
+        cxt.clearRect(0,0,500,500);
+        cxt.arc(250,250,50,0,Math.PI*2);
+        cxt.stroke();
+
+    }
+</script>
+</body>
+</html>

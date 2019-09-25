@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function nameAccount(str) {
+        myEmail = /^[_a-z0-9]{6,}$/;
+        if (myEmail.test(str)) {
+            return true;
+        }
+        return false
+    }
+
+    let email = '_wtwtc6';
+    console.log(nameAccount(email))
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input" placeholder="your number">
+<button type="button" onclick="checkValue()">Check</button>
+<script>
+    let num = Array(10);
+    let val = document.getElementById('input');
+
+
+    function checkValue() {
+        for (let i = 0; i < 10; i++) {
+            num[i] = Math.floor(Math.random() * 10);
+            if (val.value === num[i]) {
+                alert("truee");
+                break;
+            } else {
+                alert(" falsee");
+                break;
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>

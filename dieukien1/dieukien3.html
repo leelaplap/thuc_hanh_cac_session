@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dieu kien 3</title>
+</head>
+<body>
+Nhập số cần tìm
+<input type="text" id="songuyen">
+<button type="button" onclick="tinh()">tra</button>
+<b id="nhap"></b>
+<script>
+    function tinh() {
+        let a = document.getElementById('songuyen').value;
+        if (a > 0) {
+            document.getElementById('nhap').innerText = "so nay lon hon 0";
+        }
+        else if (a < 0) {
+            document.getElementById('nhap').innerHTML = "so nay nho hon 0";
+        }
+        else {
+            document.getElementById('nhap').innerHTML = "so nay bang 0";
+        }
+    }
+</script>
+</body>
+</html>

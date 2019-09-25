@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Chỉ số cân nặng là :
+<input type="text" id="weight">
+<br>
+chỉ số chiều cao là :
+<input type="text" id="height">
+<br>
+
+<button type="button" onclick="tinh()">kết quả</button>
+<script>
+    function tinh() {
+        let a = Number(document.getElementById('weight').value);
+        let b = Number(document.getElementById('height').value);
+        let c = a / (b * b);
+        if (c < 18.5) {
+            document.write("underweight");
+        } else if (c >= 18.5 && c < 25) {
+            document.write("normal");
+        } else if (c >= 25 && c < 30) {
+            document.write(" overwehght ");
+        } else {
+            document.write("obese");
+        }
+    }
+    </script>
+</body>
+</html>

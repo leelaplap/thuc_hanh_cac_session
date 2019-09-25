@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h1>BAI 3</h1>
+<script>
+    let so = 'c';
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+    for (let x = 0; x < so.length; x++) {
+        if (UPPER.indexOf(so[x]) !== -1) {
+            result.push(so[x].toLowerCase());
+        } else if (LOWER.indexOf(so[x]) !== -1) {
+            result.push(so[x].toUpperCase());
+        } else {
+            result.push(so[x]);
+        }
+    }
+    console.log(result.join(''));
+</script>
+
+</body>
+</html>

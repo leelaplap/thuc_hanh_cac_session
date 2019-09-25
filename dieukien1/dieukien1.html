@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dieu kien 1</title>
+</head>
+<body>
+
+Số thứ 1 :<input id="sothu1" type="text"><br>
+Số thứ 2 :<input id="sothu2" type="text"><br>
+<input id="nhap" type="text" disabled>
+<button type="button" onclick="sosanh()">so sánh</button>
+<script>
+    function sosanh() {
+      let a = Number(document.getElementById('sothu1').value);
+      let b = Number(document.getElementById('sothu2').value);
+      if ( a % b == 0 ) {
+          document.getElementById('nhap').value = "a chia hết cho b";
+      }
+      else {
+          document.getElementById('nhap').value = " a k chia hết cho b"
+      }
+    }
+</script>
+
+</body>
+</html>

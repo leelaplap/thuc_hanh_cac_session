@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> PHƯƠNG TRÌNH BẬC 2 CÓ DẠNG Ax2 +Bx +C = 0</h1>
+Nhập số A :<input type="text" id="a"><br>
+Nhập số B :<input type="text" id="b"><br>
+Nhập số C :<input type="text" id="c"><br>
+<button type="button" onclick="kiemTra()">Kiểm tra</button>
+<script>
+    function kiemTra() {
+        let x = Number(document.getElementById('a').value);
+        let y = Number(document.getElementById('b').value);
+        let z = Number(document.getElementById('c').value);
+        let delta = y * y - 4 * x * z;
+        if (delta < 0) {
+            document.getElementById('in').innerHTML = "Phương trình vô nghiệm";
+        } else if (delta == 0) {
+            let nghiem = -y / (2 * x);
+            document.getElementById('in').innerHTML = "Phương trình có nghiệm duy nhất là " + nghiem;
+        } else {
+            let nghiem1 = (-y + Math.sqrt(delta)) / (2 * x);
+            let nghiem2 = (-y - Math.sqrt(delta)) / (2 * x);
+            document.getElementById('in').innerHTML = "Phương trình có nghiệm 1 là :" + nghiem1 + "<br>" + "và nghiệm 2 là : " + nghiem2;
+        }
+    }
+
+</script>
+<div id="in"></div>
+</body>
+</html>

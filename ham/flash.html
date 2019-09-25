@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng mô hình hoạt động đèn pin </title>
+</head>
+<body>
+<!--<button type="button" onclick="turnOn1()">Turn on</button>-->
+<!--<button type="button" onclick="turnOff1()">Turn off</button>-->
+<!--<canvas id="lamp" width="500" height="500" style="border: 1px double black"></canvas>-->
+<script>
+    let Battery = function () {
+
+        this.setEnergy = function (energy) {
+            this.energy = energy;
+        };
+
+        this.getEnergy = function () {
+            return this.energy;
+        };
+
+        this.decreaseEnergy = function () {
+            if (this.energy > 0) {
+                this.energy--;
+            }
+        }
+    };
+
+    let FlashLamp = function () {
+
+        this.setBattery = function (battery) {
+            this.battery = battery;
+        };
+
+        this.getBatteryInfo = function () {
+            return this.battery.getEnergy();
+        };
+
+        this.light = function () {
+            if (this.status) {
+                alert('Lighting');
+            } else {
+                alert('Not Lighting');
+            }
+        };
+
+        this.turnOn = function () {
+            this.status = true;
+        };
+
+        this.turnoff = function () {
+            this.status = false;
+        }
+    };
+
+    let battery = new Battery();
+    battery.setEnergy(100);
+
+
+    let flashLamp = new FlashLamp();
+    flashLamp.setBattery(battery);
+
+
+    document.write("Battery info: " + flashLamp.getBatteryInfo() + "<br>");
+    flashLamp.light();
+
+    document.write("Turn on<br> ");
+    flashLamp.turnOn();
+    flashLamp.light();
+    battery.decreaseEnergy();
+    document.write("Battery info: " + flashLamp.getBatteryInfo() + "<br>");
+
+    document.write("Turn off <br>");
+    flashLamp.turnoff();
+    flashLamp.light();
+
+    // function Circle(x, y, radius) {
+    //     this.x =x;
+    //     this.y = y;
+    //     this.radius= radius;
+    // }
+    //
+    // function turnOn1() {
+    //     let objs = document.getElementById('lamp').getContext('2d');
+    //     let circle = new Circle(100,100,80);
+    //     objs.beginPath();
+    //     objs.clearRect(0,0,500,500);
+    //     objs.arc(circle.x , circle.y, circle.radius,0, Math.PI*2);
+    //     objs.fillStyle = "red";
+    //     objs.fill();
+    //
+    // }
+    //
+    //
+    // function turnOff1() {
+    //     let obj = document.getElementById('lamp').getContext('2d');
+    //     let circle = new Circle(100,100,80);
+    //     obj.beginPath();
+    //     obj.clearRect(0,0,500,500);
+    //     obj.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
+    //     // obj.fillStyle = "blue";
+    //     obj.strokeStyle = "black";
+    //     obj.stroke();
+    //     // obj.fill();
+    //
+    // }
+
+</script>
+</body>
+</html>

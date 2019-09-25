@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapso" placeholder="Nhập số để xét">
+<button type="button" onclick="xet()">XÉT</button>
+<pre id="demo"></pre>
+<script>
+    function xet() {
+        let num = [12, 6, 9, 3, 55, 88, 2, 456, 2125, 7];
+        let so = Number(document.getElementById('nhapso').value);
+        for (let i = 0; i < num.length; i++) {
+            if (so === num[i]) {
+                document.getElementById('demo').innerHTML = " The number is in the  array";
+                break;
+            } else {
+                document.getElementById('demo').innerHTML = " The number is not in the array";
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

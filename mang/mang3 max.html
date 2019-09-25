@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre id="demo"></pre>
+<pre id="demo1"></pre>
+<script>
+    let num = [12, 6, 9, 3, 55, 88, 2, 456, 2125, 7];
+    let max = num[0];
+    let sum = 0;
+
+    for (let j = 0; j < num.length; j++) {
+        sum = sum + num[j];
+        if (max < num[j]) {
+            max = num[j];
+        }
+    }
+    let middle = sum/ num.length;
+    document.getElementById('demo').innerHTML = "só lớn nhất là " + max  + "<br>";
+    document.getElementById('demo1').innerHTML = `Gia tri trung binh la: ${middle}`;
+
+</script>
+</body>
+</html>

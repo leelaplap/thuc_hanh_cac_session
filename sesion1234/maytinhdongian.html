@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, th, td {
+            border: 10px solid rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+<table style="width:20%">
+    <tr>
+        <th colspan="4"><input type="text" id="nhapso"></th>
+    </tr>
+    <tr>
+        <th>
+            <button type="button" onclick="aa(1)">1</button>
+        </th>
+        <th>
+            <button type="button" onclick="aa(2)">2</button>
+        </th>
+        <th>
+            <button type="button" onclick="aa(3)">3</button>
+        </th>
+        <th>
+            <button type="button" onclick="tinh('+')">+</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button type="button" onclick="aa(4)">4</button>
+        </th>
+        <th>
+            <button type="button" onclick="aa(5)">5</button>
+        </th>
+        <th>
+            <button type="button" onclick="aa(6)">6</button>
+        </th>
+        <th>
+            <button type="button" onclick="tinh('-')">/</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button type="button" onclick="aa(7)">7</button>
+        </th>
+        <th>
+            <button type="button" onclick="aa(8)">8</button>
+        </th>
+        <th>
+            <button type="button" onclick="aa(9)">9</button>
+        </th>
+        <th>
+            <button type="button" onclick="tinh('*')">x</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button type="button" onclick="aa(0)"> 0</button>
+        </th>
+        <th>
+            <button type="button" onclick="del()">C</button>
+        </th>
+        <th>
+            <button type="button" onclick="tinhkq('=')">=</button>
+        </th>
+        <th>
+            <button type="button" onclick="tinh('/')">/</button>
+        </th>
+    </tr>
+    <script>
+
+        let number1 = "";
+        let number2 = "";
+        let input = document.getElementById('nhapso');
+        let operation = "";
+    let resuil;
+        function aa(number) {
+            input.value += number;
+        }
+
+        function tinh(ka) {
+
+            number1 = +(input.value);
+            input.value="";
+            operation = ka;
+        }
+    function tinhkq() {
+
+        number2 = +(input.value);
+            switch (operation) {
+                case "+":
+                    resuil = number1 + number2;
+                    break;
+                case "-": resuil = number1 - number2;
+                    break;
+                case "/": resuil = number1 * number2;
+                    break;
+                case "*": resuil = number1 / number2;
+                    break;
+            }
+        input.value=resuil;
+        }
+
+    </script>
+</table>
+</body>
+</html>

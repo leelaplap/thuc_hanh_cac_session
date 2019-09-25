@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function phoneNumber(str) {
+        number = /^\([0-9]{2}\)\-\([0][0-9]{9}\)$/;
+        if (number.test(str)){
+            return true;
+        }
+        return false;
+    }
+
+    let abc = "(6j)-(0666666666)";
+    console.log(phoneNumber(abc));
+</script>
+</body>
+</html>

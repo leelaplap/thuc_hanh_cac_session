@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (let i = 1; i < 100; i++) {
+        if (i % 3 == 0) {
+            document.write(' fizz ');
+        } else if (i % 5 == 0) {
+            document.write(' buzz ');
+        } else if (i % 3 == 0 && i % 5 == 0) {
+            document.write(' fizzbuzzz ')
+        } else {
+            document.write(i + ' ')
+        }
+    }
+</script>
+<br><br><br><br>
+
+<script>
+    let num = 0;
+    for (let i = 1; i < 100; i++) {
+        if (i % 3 == 0) {
+            num = " fizz";
+        } else if (i % 5 == 0) {
+            num = " buzz";
+        } else if (i % 3 == 0 && i % 5 == 0) {
+            num = "fizzbuzz";
+        } else {
+            num = i;
+        }
+        document.write(num);
+
+    }
+</script>
+</body>
+</html>

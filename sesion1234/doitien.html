@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đỏi tiền</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>CACULATOR</legend>
+    Amount: <input id="1" type="text" size="30" value=""><br/>
+    From Currency :
+    <select id="2">
+        <option value="23000">VNĐ</option>
+        <option value="1">Đô</option>
+        <option value="104.7">Yên</option>
+    </select><br/>
+    To Currency :
+    <select id="3">
+        <option value="23000">VNĐ</option>
+        <option value="1">Đô</option>
+        <option value="104.7">Yên</option>
+    </select><br/>
+    <input id="4" type="text">
+    <button type="button" onclick="doi()">Đổi tại đây</button>
+    <script>
+        function doi() {
+            let a = +document.getElementById("1").value;
+            let b = +document.getElementById("2").value;
+            let c = +document.getElementById("3").value;
+
+            document.getElementById("4").value = a*c/b;
+        }
+    </script>
+    </fieldset>
+</form>
+</body>
+</html>
